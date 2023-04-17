@@ -5,7 +5,10 @@ import resolvers from './resolvers';
 
 const server = new ApolloServer({
     typeDefs: typeDefs,
-    resolvers: resolvers
+    resolvers: resolvers,
+    cors: {
+        origin: 'https://ecommerce-frontend-pe84.onrender.com',
+    }
 });
 
 server.listen().then(({ url }) => {
